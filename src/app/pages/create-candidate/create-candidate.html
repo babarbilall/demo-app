@@ -1,0 +1,24 @@
+<div class="container">
+    <h1>Create Candidate</h1>
+    <div class="list__holder">
+      <div class="list__actions">
+        <button class="btn btn-default" (click)="navigate('/dashboard')">List Candidates</button>
+        <button class="btn btn-danger" (click)="logout()">Logout</button>
+      </div>
+      <div class="list__content_form">
+        <app-create-candidate-step1
+          *ngIf="step.s1"
+          [data]="request"
+          (onStepChange)="changeStep('s2')"
+          (onChanges)="onChanges($event)"></app-create-candidate-step1>
+        
+        <app-create-candidate-step2
+          *ngIf="step.s2"
+          [data]="request"
+          [requestSent]="requestSent"
+          (onChanges)="onChanges($event)"
+          (onBack)="changeStep('s1')"
+          (submit)="onFinish($event)"></app-create-candidate-step2>
+      </div>
+    </div>
+  </div>

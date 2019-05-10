@@ -1,0 +1,114 @@
+<form *ngIf="form" [formGroup]="form">
+  <!-- <div class="form-group" [class.has-error]="form.controls['consultantId'].touched && form.controls['consultantId'].errors">
+    <label for="exampleInputEmail1">Consultant Id</label>
+    <input type="text" [formControl]="form.controls['consultantId']" class="form-control">
+  </div> -->
+
+  <div class="form-group" [class.has-error]="form.controls['initials'].touched && form.controls['initials'].errors">
+    <label for="exampleInputEmail1">Initials</label>
+    <input type="text" [formControl]="form.controls['initials']" class="form-control">
+  </div>
+  
+  <div class="form-group" [class.has-error]="form.controls['firstName'].touched && form.controls['firstName'].errors">
+    <label for="exampleInputEmail1">First name</label>
+    <input type="text" [formControl]="form.controls['firstName']" class="form-control">
+  </div>
+
+  <div class="form-group" [class.has-error]="form.controls['lastName'].touched && form.controls['firstName'].errors">
+    <label for="exampleInputEmail1">Last name</label>
+    <input type="text" [formControl]="form.controls['lastName']" class="form-control">
+  </div>
+
+  <div class="form-group" [class.has-error]="form.controls['maidenName'].touched && form.controls['maidenName'].errors">
+    <label for="exampleInputEmail1">Maiden name</label>
+    <input type="text" [formControl]="form.controls['maidenName']" class="form-control">
+  </div>
+
+  <div class="form-group" [class.has-error]="form.controls['givenName'].touched && form.controls['givenName'].errors">
+    <label for="exampleInputEmail1">Given name</label>
+    <input type="text" [formControl]="form.controls['givenName']" class="form-control">
+  </div>
+
+  <div class="form-group" [class.has-error]="form.controls['familyNamePreposition'].touched && form.controls['familyNamePreposition'].errors">
+    <label for="exampleInputEmail1">Family name preposition</label>
+    <input type="text" [formControl]="form.controls['familyNamePreposition']" class="form-control">
+  </div>
+
+  <!-- <div class="form-group" [class.has-error]="form.controls['title'].touched && form.controls['title'].errors">
+    <label for="exampleInputEmail1">Title</label>
+    <input type="text" [formControl]="form.controls['title']" class="form-control">
+  </div> -->
+
+  <!-- <div class="form-group radio-label">
+    <label for="exampleInputEmail1">Gender</label>
+    <input type="radio" [formControl]="form.controls['gender']" name="candidategender" value="03bd1bfb-d449-4e7e-8b2b-2ec6130e468d"/> Male
+    <input type="radio" [formControl]="form.controls['gender']" name="candidategender" value="03bd1bfb-d449-4e7e-8b2b-2ec6130e468d"/> Female
+  </div> -->
+
+  <!-- <div class="form-group radio-label">
+    <label for="exampleInputEmail1">Martial Status</label>
+    <input type="radio" [formControl]="form.controls['maritalStatus']" name="candidatems" value="04bd1bfb-d449-4e7e-8b2b-2ec6130e468d"/> Single
+    <input type="radio" [formControl]="form.controls['maritalStatus']" name="candidatems" value="04bd1bfb-d449-4e7e-8b2b-2ec6130e468d"/> Married
+    <input type="radio" [formControl]="form.controls['maritalStatus']" name="candidatems" value="04bd1bfb-d449-4e7e-8b2b-2ec6130e468d"/> Divorced
+  </div> -->
+
+  <!-- <div class="form-group" [class.has-error]="form.controls['placeOfBirth'].touched && form.controls['placeOfBirth'].errors">
+    <label for="exampleInputEmail1">Place of birth</label>
+    <input type="text" [formControl]="form.controls['placeOfBirth']" class="form-control">
+  </div> -->
+
+  <!-- <div class="form-group" [class.has-error]="form.controls['countryOfBirth'].touched && form.controls['countryOfBirth'].errors">
+    <label for="exampleInputEmail1">Country of birth</label>
+    <input type="text" [formControl]="form.controls['countryOfBirth']" class="form-control">
+  </div> -->
+
+  <div class="form-group" [class.has-error]="form.controls['dateOfBirth'].touched && form.controls['dateOfBirth'].errors">
+    <label for="exampleInputEmail1">Date of birth</label>
+    <input type="date" [formControl]="form.controls['dateOfBirth']" class="form-control">
+  </div>
+
+  <div class="form-group" [class.has-error]="form.controls['availablePer'].touched && form.controls['availablePer'].errors">
+    <label for="exampleInputEmail1">Available per</label>
+    <input type="date" [formControl]="form.controls['availablePer']" class="form-control">
+  </div>
+
+  <!-- <div class="form-group" [class.has-error]="form.controls['origin'].touched && form.controls['origin'].errors">
+    <label for="exampleInputEmail1">Origin</label>
+    <input type="text" [formControl]="form.controls['origin']" class="form-control">
+  </div> -->
+
+  <div class="form-group" [class.has-error]="form.controls['skypeId'].touched && form.controls['skypeId'].errors">
+    <label for="exampleInputEmail1">Skype username</label>
+    <input type="text" [formControl]="form.controls['skypeId']" class="form-control">
+  </div>
+
+  <!-- <div class="form-group" [class.has-error]="form.controls['nationality'].touched && form.controls['nationality'].errors">
+    <label for="exampleInputEmail1">Nationality</label>
+    <input type="text" [formControl]="form.controls['nationality']" class="form-control">
+  </div> -->
+
+  <div class="form-group" [class.has-error]="form.controls['businessEmailAddress'].touched && form.controls['businessEmailAddress'].errors">
+    <label for="exampleInputEmail1">Business email</label>
+    <input type="text" [formControl]="form.controls['businessEmailAddress']" class="form-control">
+  </div>
+
+  <div class="form-group" [class.has-error]="form.controls['privateEmailAddress'].touched && form.controls['privateEmailAddress'].errors">
+    <label for="exampleInputEmail1">Private email</label>
+    <input type="text" [formControl]="form.controls['privateEmailAddress']" class="form-control">
+  </div>
+
+  <div class="form-group" [class.has-error]="form.controls['cvUrl'].touched && form.controls['cvUrl'].errors">
+    <label for="exampleInputEmail1">CV URL</label>
+    <input type="text" [formControl]="form.controls['cvUrl']" class="form-control">
+  </div>
+
+  <div class="form-group" [class.has-error]="form.controls['interviewDate'].touched && form.controls['interviewDate'].errors">
+    <label for="exampleInputEmail1">Interview date</label>
+    <input type="date" [formControl]="form.controls['interviewDate']" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <button type="button" class="btn btn-default" [disabled]="!form.valid" (click)="onStep()">Next</button>
+    <!-- <button type="button" class="btn btn-default" (click)="onStep()">Next</button> -->
+  </div>
+</form>

@@ -1,0 +1,207 @@
+<div>
+  <form *ngIf="addressForm" [formGroup]="addressForm">
+    <h3 class="form-title">Address</h3>
+    <div class="form-group" [class.has-error]="addressForm.controls['street'].touched && addressForm.controls['street'].errors">
+      <label for="exampleInputEmail1">Street</label>
+      <input type="text" [formControl]="addressForm.controls['street']" class="form-control">
+    </div>
+  
+    <div class="form-group" [class.has-error]="addressForm.controls['houseNumber'].touched && addressForm.controls['houseNumber'].errors">
+      <label for="exampleInputEmail1">House number</label>
+      <input type="text" [formControl]="addressForm.controls['houseNumber']" class="form-control">
+    </div>
+    
+    <div class="form-group" [class.has-error]="addressForm.controls['houseNumberAddition'].touched && addressForm.controls['houseNumberAddition'].errors">
+      <label for="exampleInputEmail1">House number addition</label>
+      <input type="text" [formControl]="addressForm.controls['houseNumberAddition']" class="form-control">
+    </div>
+  
+    <div class="form-group" [class.has-error]="addressForm.controls['postalCode'].touched && addressForm.controls['postalCode'].errors">
+      <label for="exampleInputEmail1">Postal Code</label>
+      <input type="text" [formControl]="addressForm.controls['postalCode']" class="form-control">
+    </div>
+  
+    <!-- <div class="form-group" [class.has-error]="addressForm.controls['country'].touched && addressForm.controls['country'].errors">
+      <label for="exampleInputEmail1">Country</label>
+      <input type="text" [formControl]="addressForm.controls['country']" class="form-control">
+    </div>
+  
+    <div class="form-group" [class.has-error]="addressForm.controls['province'].touched && addressForm.controls['province'].errors">
+      <label for="exampleInputEmail1">Province</label>
+      <input type="text" [formControl]="addressForm.controls['province']" class="form-control">
+    </div>
+  
+    <div class="form-group" [class.has-error]="addressForm.controls['municipality'].touched && addressForm.controls['municipality'].errors">
+      <label for="exampleInputEmail1">Municipality</label>
+      <input type="text" [formControl]="addressForm.controls['municipality']" class="form-control">
+    </div> -->
+  
+    <div class="form-group" [class.has-error]="addressForm.controls['countryCode'].touched && addressForm.controls['countryCode'].errors">
+      <label for="exampleInputEmail1">Country code</label>
+      <input type="text" [formControl]="addressForm.controls['countryCode']" class="form-control">
+    </div>
+  
+    <div class="form-group" [class.has-error]="addressForm.controls['apartmentNumber'].touched && addressForm.controls['apartmentNumber'].errors">
+      <label for="exampleInputEmail1">Apartment number</label>
+      <input type="text" [formControl]="addressForm.controls['apartmentNumber']" class="form-control">
+    </div>
+  
+    <div class="form-group" [class.has-error]="addressForm.controls['apartmentNumberAddition'].touched && addressForm.controls['apartmentNumberAddition'].errors">
+      <label for="exampleInputEmail1">Apartment number addition</label>
+      <input type="text" [formControl]="addressForm.controls['apartmentNumberAddition']" class="form-control">
+    </div>
+  </form>
+
+  <form *ngIf="mobilePhoneForm" [formGroup]="mobilePhoneForm">
+    <h3 class="form-title">Mobile phone details</h3>
+    <div class="form-group" [class.has-error]="mobilePhoneForm.controls['number'].touched && mobilePhoneForm.controls['number'].errors">
+      <label for="exampleInputEmail1">Number</label>
+      <input type="text" [formControl]="mobilePhoneForm.controls['number']" class="form-control">
+    </div>
+
+    <div class="form-group" [class.has-error]="mobilePhoneForm.controls['localFormat'].touched && mobilePhoneForm.controls['localFormat'].errors">
+      <label for="exampleInputEmail1">Local format</label>
+      <input type="text" [formControl]="mobilePhoneForm.controls['localFormat']" class="form-control">
+    </div>
+
+    <div class="form-group" [class.has-error]="mobilePhoneForm.controls['internationalFormat'].touched && mobilePhoneForm.controls['internationalFormat'].errors">
+      <label for="exampleInputEmail1">International format</label>
+      <input type="text" [formControl]="mobilePhoneForm.controls['internationalFormat']" class="form-control">
+    </div>
+
+    <div class="form-group" [class.has-error]="mobilePhoneForm.controls['countryPrefix'].touched && mobilePhoneForm.controls['countryPrefix'].errors">
+      <label for="exampleInputEmail1">Country prefix</label>
+      <input type="text" [formControl]="mobilePhoneForm.controls['countryPrefix']" class="form-control">
+    </div>
+
+    <div class="form-group" [class.has-error]="mobilePhoneForm.controls['countryCode'].touched && mobilePhoneForm.controls['countryCode'].errors">
+      <label for="exampleInputEmail1">Country code</label>
+      <input type="text" [formControl]="mobilePhoneForm.controls['countryCode']" class="form-control">
+    </div>
+
+    <!-- <div class="form-group" [class.has-error]="mobilePhoneForm.controls['countryName'].touched && mobilePhoneForm.controls['countryName'].errors">
+      <label for="exampleInputEmail1">Country name</label>
+      <input type="text" [formControl]="mobilePhoneForm.controls['countryName']" class="form-control">
+    </div>
+
+    <div class="form-group" [class.has-error]="mobilePhoneForm.controls['location'].touched && mobilePhoneForm.controls['location'].errors">
+      <label for="exampleInputEmail1">Location</label>
+      <input type="text" [formControl]="mobilePhoneForm.controls['location']" class="form-control">
+    </div> -->
+
+    <div class="form-group" [class.has-error]="mobilePhoneForm.controls['carrier'].touched && mobilePhoneForm.controls['carrier'].errors">
+      <label for="exampleInputEmail1">Carrier</label>
+      <input type="text" [formControl]="mobilePhoneForm.controls['carrier']" class="form-control">
+    </div>
+
+    <!-- <div class="form-group" [class.has-error]="mobilePhoneForm.controls['lineType'].touched && mobilePhoneForm.controls['lineType'].errors">
+      <label for="exampleInputEmail1">Line type</label>
+      <input type="text" [formControl]="mobilePhoneForm.controls['lineType']" class="form-control">
+    </div> -->
+  </form>
+
+  <form *ngIf="privatePhoneForm" [formGroup]="privatePhoneForm">
+    <h3 class="form-title">Private Phone details</h3>
+    <div class="form-group" [class.has-error]="privatePhoneForm.controls['number'].touched && privatePhoneForm.controls['number'].errors">
+      <label for="exampleInputEmail1">Number</label>
+      <input type="text" [formControl]="privatePhoneForm.controls['number']" class="form-control">
+    </div>
+
+    <div class="form-group" [class.has-error]="privatePhoneForm.controls['localFormat'].touched && privatePhoneForm.controls['localFormat'].errors">
+      <label for="exampleInputEmail1">Local format</label>
+      <input type="text" [formControl]="privatePhoneForm.controls['localFormat']" class="form-control">
+    </div>
+
+    <div class="form-group" [class.has-error]="privatePhoneForm.controls['internationalFormat'].touched && privatePhoneForm.controls['internationalFormat'].errors">
+      <label for="exampleInputEmail1">International format</label>
+      <input type="text" [formControl]="privatePhoneForm.controls['internationalFormat']" class="form-control">
+    </div>
+
+    <div class="form-group" [class.has-error]="privatePhoneForm.controls['countryPrefix'].touched && privatePhoneForm.controls['countryPrefix'].errors">
+      <label for="exampleInputEmail1">Country prefix</label>
+      <input type="text" [formControl]="privatePhoneForm.controls['countryPrefix']" class="form-control">
+    </div>
+
+    <div class="form-group" [class.has-error]="privatePhoneForm.controls['countryCode'].touched && privatePhoneForm.controls['countryCode'].errors">
+      <label for="exampleInputEmail1">Country code</label>
+      <input type="text" [formControl]="privatePhoneForm.controls['countryCode']" class="form-control">
+    </div>
+
+    <!-- <div class="form-group" [class.has-error]="privatePhoneForm.controls['countryName'].touched && privatePhoneForm.controls['countryName'].errors">
+      <label for="exampleInputEmail1">Country name</label>
+      <input type="text" [formControl]="privatePhoneForm.controls['countryName']" class="form-control">
+    </div>
+
+    <div class="form-group" [class.has-error]="privatePhoneForm.controls['location'].touched && privatePhoneForm.controls['location'].errors">
+      <label for="exampleInputEmail1">Location</label>
+      <input type="text" [formControl]="privatePhoneForm.controls['location']" class="form-control">
+    </div> -->
+
+    <div class="form-group" [class.has-error]="privatePhoneForm.controls['carrier'].touched && privatePhoneForm.controls['carrier'].errors">
+      <label for="exampleInputEmail1">Carrier</label>
+      <input type="text" [formControl]="privatePhoneForm.controls['carrier']" class="form-control">
+    </div>
+
+    <!-- <div class="form-group" [class.has-error]="privatePhoneForm.controls['lineType'].touched && privatePhoneForm.controls['lineType'].errors">
+      <label for="exampleInputEmail1">Line type</label>
+      <input type="text" [formControl]="privatePhoneForm.controls['lineType']" class="form-control">
+    </div> -->
+  </form>
+
+  <form *ngIf="businessPhoneForm" [formGroup]="businessPhoneForm">
+    <h3 class="form-title">Business phone details</h3>
+    <div class="form-group" [class.has-error]="businessPhoneForm.controls['number'].touched && businessPhoneForm.controls['number'].errors">
+      <label for="exampleInputEmail1">Number</label>
+      <input type="text" [formControl]="businessPhoneForm.controls['number']" class="form-control">
+    </div>
+
+    <div class="form-group" [class.has-error]="businessPhoneForm.controls['localFormat'].touched && businessPhoneForm.controls['localFormat'].errors">
+      <label for="exampleInputEmail1">Local format</label>
+      <input type="text" [formControl]="businessPhoneForm.controls['localFormat']" class="form-control">
+    </div>
+
+    <div class="form-group" [class.has-error]="businessPhoneForm.controls['internationalFormat'].touched && businessPhoneForm.controls['internationalFormat'].errors">
+      <label for="exampleInputEmail1">International format</label>
+      <input type="text" [formControl]="businessPhoneForm.controls['internationalFormat']" class="form-control">
+    </div>
+
+    <div class="form-group" [class.has-error]="businessPhoneForm.controls['countryPrefix'].touched && businessPhoneForm.controls['countryPrefix'].errors">
+      <label for="exampleInputEmail1">Country prefix</label>
+      <input type="text" [formControl]="businessPhoneForm.controls['countryPrefix']" class="form-control">
+    </div>
+
+    <div class="form-group" [class.has-error]="businessPhoneForm.controls['countryCode'].touched && businessPhoneForm.controls['countryCode'].errors">
+      <label for="exampleInputEmail1">Country code</label>
+      <input type="text" [formControl]="businessPhoneForm.controls['countryCode']" class="form-control">
+    </div>
+
+    <!-- <div class="form-group" [class.has-error]="businessPhoneForm.controls['countryName'].touched && businessPhoneForm.controls['countryName'].errors">
+      <label for="exampleInputEmail1">Country name</label>
+      <input type="text" [formControl]="businessPhoneForm.controls['countryName']" class="form-control">
+    </div>
+
+    <div class="form-group" [class.has-error]="businessPhoneForm.controls['location'].touched && businessPhoneForm.controls['location'].errors">
+      <label for="exampleInputEmail1">Location</label>
+      <input type="text" [formControl]="businessPhoneForm.controls['location']" class="form-control">
+    </div> -->
+
+    <div class="form-group" [class.has-error]="businessPhoneForm.controls['carrier'].touched && businessPhoneForm.controls['carrier'].errors">
+      <label for="exampleInputEmail1">Carrier</label>
+      <input type="text" [formControl]="businessPhoneForm.controls['carrier']" class="form-control">
+    </div>
+
+    <!-- <div class="form-group" [class.has-error]="businessPhoneForm.controls['lineType'].touched && businessPhoneForm.controls['lineType'].errors">
+      <label for="exampleInputEmail1">Line type</label>
+      <input type="text" [formControl]="businessPhoneForm.controls['lineType']" class="form-control">
+    </div> -->
+  
+    <div class="form-group action-btns">
+      <button type="button"class="btn btn-default" (click)="onBackStep()">Back</button>
+      <button
+        class="btn btn-default"
+        type="button"
+        [disabled]="!addressForm.valid || !mobilePhoneForm.valid || !businessPhoneForm.valid || !privatePhoneForm.valid || requestSent"
+        (click)="onSubmit()">Finish</button>
+    </div>
+  </form>
+</div>

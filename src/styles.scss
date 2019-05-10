@@ -1,0 +1,51 @@
+/* You can add global styles to this file, and also import other style files */
+
+app-login {
+  .login-panel {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+  }
+}
+
+.list_ {
+  &_holder{
+    padding: 10px;
+  }
+  &_actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  &_content {
+    border-top: 2px solid #ddd;
+    margin-top: 20px;
+    .actions {
+      i {
+        margin-left: 5px;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+  &_content_form {
+    margin-top: 20px;
+    .radio-label {
+      input[type="radio"] {
+        margin-left: 15px;
+      }
+    }
+    .action-btns {
+      button {
+        margin-right: 15px;
+      }
+    }
+    .form-title {
+      text-align: center;
+      margin-top: 30px;
+    }
+  }
+}
