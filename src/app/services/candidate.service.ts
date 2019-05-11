@@ -15,7 +15,7 @@ export class CandidateService {
   getList(skip?: number, take?: number): Observable<any> {
     let params: any = {
       skip: skip ? skip : 0,
-      take: take ? take : 10
+      take: take ? take : 100
     };
     return this.http.get(`${this.READ_API}/candidate/consultant`, {
       params: params

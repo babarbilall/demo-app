@@ -7,12 +7,14 @@
       </div>
       <div class="list__content_form">
         <app-create-candidate-step1
+          #step1
           *ngIf="step.s1"
           [data]="request"
           (onStepChange)="changeStep('s2')"
           (onChanges)="onChanges($event)"></app-create-candidate-step1>
         
         <app-create-candidate-step2
+          #step2
           *ngIf="step.s2"
           [data]="request"
           [requestSent]="requestSent"

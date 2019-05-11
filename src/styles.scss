@@ -49,3 +49,13 @@ app-login {
     }
   }
 }
+
+.candidate-record {
+  span {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+    white-space: nowrap;
+    width: 200px;
+  }
+}

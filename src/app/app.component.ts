@@ -33,10 +33,10 @@ export class AppComponent {
   fetchCandidates() {
     this.service.getList().subscribe(res => {
       const data = res.data;
-      this.store.dispatch({
-        type: CANDIDATE.INIT,
-        data
-      })
+      // this.store.dispatch({
+      //   type: CANDIDATE.INIT,
+      //   data
+      // });
     });
   }
 }

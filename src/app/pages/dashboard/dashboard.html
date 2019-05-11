@@ -10,26 +10,26 @@
           <thead>
             <tr>
               <th scope="col">#</th>
-              <th scope="col">First name</th>
-              <th scope="col">Last name</th>
-              <th scope="col">Gender</th>
-              <th scope="col">Interview Date</th>
+              <th scope="col">Fullname</th>
+              <th scope="col">Residence</th>
+              <th scope="col">Status</th>
               <th scope="col">Actions</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td>@mdo</td>
-              <td class="actions">
-                <i class="fa fa-eye"></i>
-                <i class="fa fa-edit"></i>
-                <i class="fa fa-trash"></i>
-              </td>
-            </tr>
+            <ng-template ngFor [ngForOf]="candidates" let-item let-idx="index">
+              <tr class="candidate-record">
+                <th scope="row">{{idx + 1}}</th>
+                <td><span>{{item.candidateName}}</span></td>
+                <td><span>{{item.placeOfResidence}}</span></td>
+                <td><span>{{item.status}}</span></td>
+                <td class="actions">
+                  <i (click)="onView(item.candidateId)" class="fa fa-eye"></i>
+                  <i (click)="onEdit(item.candidateId)" class="fa fa-edit"></i>
+                  <i class="fa fa-trash"></i>
+                </td>
+              </tr>
+            </ng-template>
           </tbody>
       </table>
     </div>

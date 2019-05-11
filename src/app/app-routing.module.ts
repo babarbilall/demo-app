@@ -12,6 +12,7 @@ const routes: Routes = [
     { path: "", pathMatch: "full", redirectTo: "dashboard" },
     { path: "dashboard", component: DashboardComponent },
     { path: "create-candidate", component: CreateCandidateComponent },
+    { path: "create-candidate/:id", component: CreateCandidateComponent },
     { path: "login", component: LoginComponent },
     { path: "callback.html", component: CallbackComponent },
     { path: "*", component: NotFoundComponent }

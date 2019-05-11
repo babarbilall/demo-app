@@ -1,15 +1,19 @@
-import { Component} from "@angular/core";
+import { Component, OnDestroy, ViewChild } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { IAppState } from "src/app/store/state/app.state";
-import { Router } from "@angular/router";
+import { Router, ActivatedRoute } from "@angular/router";
 import { Store } from "@ngrx/store";
 import { AuthService, CandidateService, CandidateModel } from 'src/app/services';
+import { CreateCandidateStep1Component } from "./step1";
+import { CreateCandidateStep2Component } from "./step2";
 
 @Component({
   selector: "app-create-candidate",
   templateUrl: "create-candidate.html"
 })
-export class CreateCandidateComponent {
+export class CreateCandidateComponent implements OnDestroy {
+  @ViewChild("step1") step1: CreateCandidateStep1Component;
+  @ViewChild("step2") step2: CreateCandidateStep2Component;
   request: CandidateModel = {
     drivingLicenses: ["761065f3-194f-45e2-9a47-d1e9080e64ad"],
     typesOfTransportation: ["761065f3-194f-45e2-9a47-d1e9080e64ad"],
@@ -45,12 +49,32 @@ export class CreateCandidateComponent {
     s2: false
   };
   requestSent: boolean = false;
+  subscriptions: any = {};
+  editId: string = null;
   constructor(
     private authService: AuthService,
     private service: CandidateService,
+    private activatedRoute: ActivatedRoute,
     private store: Store<IAppState>,
     private router: Router
-  ) { }
+  ) {
+    this.subscriptions["params"] = this.activatedRoute.params.subscribe(params => {
+      if (params.id) {
+        this.editId = params.id;
+        this.getCandidate();
+      }
+    });
+  }
+
+  getCandidate() {
+    this.service.getCandidate(this.editId).subscribe(candidate => {
+      this.request = candidate.data;
+      setTimeout(() => {
+        if (this.step1) this.step1.initForm();
+        if (this.step2) this.step2.initForm();
+      });
+    });
+  }
 
   onChanges(fields) {
     for (let key in fields) {
@@ -75,5 +99,11 @@ export class CreateCandidateComponent {
 
   navigate(path) {
     this.router.navigateByUrl(path);
+  }
+
+  ngOnDestroy() {
+    for (let key in this.subscriptions) {
+      this.subscriptions[key].unsubscribe();
+    }
   }
 }
